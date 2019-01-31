@@ -1,7 +1,7 @@
 require 'hashes.rb'
 
 RSpec.configure do |config|
-  config.filter_run_excluding :disabled => true
+  config.filter_run_excluding
 end
 
 describe 'Ruby Hashes Part I' do
@@ -23,9 +23,9 @@ describe 'Ruby Hashes Part I' do
   end
 end
 
-describe 'Ruby Hashes Part II' do
+describe 'Ruby Hashes Part II', :disabled => true do
 
-  describe "array2d_2_hash", :disabled => true do
+  describe "array2d_2_hash" do
     it "should be defined" do
       expect { array2d_2_hash([["bobsmith@example.com", "555-555-5555"],["sallyfield@example.com","111-111-1111"]], {'Bob Smith':{}, 'Sally Field':{}}) }.not_to raise_error
     end
@@ -42,9 +42,9 @@ describe 'Ruby Hashes Part II' do
   end
 end
 
-describe 'Ruby Hashes Part III' do
+describe 'Ruby Hashes Part III', :disabled => true do
 
-  describe "hash_2_array", :disabled => true do
+  describe "hash_2_array" do
     it "should be defined" do
       expect { hash_2_array({:"Bob Smith"=>{:email=>"bobsmith@example.com", :phone=>"555-555-5555"}, :"Sally Field"=>{:email=>"sallyfield@example.com", :phone=>"111-111-1111"}}) }.not_to raise_error
     end
