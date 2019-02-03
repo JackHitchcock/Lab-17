@@ -37,10 +37,9 @@ def array2d_2_hash contact_info, contacts
 end
 
 # Part III
-def hash_2_array contacts
+#def hash_2_array contacts
 contacts = {"Bob Smith" =>{:email=>"bobsmith@example.com", :phone=>"555-555-5555"} , "Sally Field"=>{:email=>"sallyfield@example.com", :phone=>"111-111-1111"}}
 def hash_2_array contacts
-
 keys = contacts.keys
 l = contacts.length
 ar = Array.new(3){Array.new(l)}
@@ -49,6 +48,8 @@ ar[2][i] = keys[i]
 ar[0][i] = contacts[keys[i]][:email]
 ar[1][i] = contacts[keys[i]][:phone]
 end
-puts ar
+return ar
 end
-end
+hash_2_array contacts
+
+

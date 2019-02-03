@@ -1,7 +1,7 @@
 require 'hashes.rb'
 
 RSpec.configure do |config|
-  config.filter_run_excluding
+  config.filter_run_excluding 
 end
 
 describe 'Ruby Hashes Part I' do
@@ -23,7 +23,7 @@ describe 'Ruby Hashes Part I' do
   end
 end
 
-describe 'Ruby Hashes Part II', :disabled => true do
+describe 'Ruby Hashes Part II' do
 
   describe "array2d_2_hash" do
     it "should be defined" do
@@ -42,21 +42,21 @@ describe 'Ruby Hashes Part II', :disabled => true do
   end
 end
 
-describe 'Ruby Hashes Part III', :disabled => true do
+describe 'Ruby Hashes Part III' do
 
   describe "hash_2_array" do
     it "should be defined" do
-      expect { hash_2_array({:"Bob Smith"=>{:email=>"bobsmith@example.com", :phone=>"555-555-5555"}, :"Sally Field"=>{:email=>"sallyfield@example.com", :phone=>"111-111-1111"}}) }.not_to raise_error
+      expect { hash_2_array({"Bob Smith"=>{:email=>"bobsmith@example.com", :phone=>"555-555-5555"}, :"Sally Field"=>{:email=>"sallyfield@example.com", :phone=>"111-111-1111"}}) }.not_to raise_error
     end
     
-    it "returns the correct array of arrays [20 points]" , points: 20 do
-      expect(hash_2_array({:"Bob Smith"=>{:email=>"bobsmith@example.com", :phone=>"555-555-5555"}, :"Sally Field"=>{:email=>"sallyfield@example.com", :phone=>"111-111-1111"}})).to be_a_kind_of Array
-      expect(hash_2_array({:"Bob Smith"=>{:email=>"bobsmith@example.com", :phone=>"555-555-5555"}, :"Sally Field"=>{:email=>"sallyfield@example.com", :phone=>"111-111-1111"}})).to eq([["bobsmith@example.com","sallyfield@example.com"],["555-555-5555","111-111-1111"],["Bob Smith","Sally Field"]])
+    it "returns the correct array of arrays [20 points]", points: 20 do
+      expect(hash_2_array({"Bob Smith"=>{:email=>"bobsmith@example.com", :phone=>"555-555-5555"}, "Sally Field"=>{:email=>"sallyfield@example.com", :phone=>"111-111-1111"}})).to be_a_kind_of Array
+      expect(hash_2_array({"Bob Smith"=>{:email=>"bobsmith@example.com", :phone=>"555-555-5555"}, "Sally Field"=>{:email=>"sallyfield@example.com", :phone=>"111-111-1111"}})).to eq([["bobsmith@example.com","sallyfield@example.com"],["555-555-5555","111-111-1111"],["Bob Smith","Sally Field"]])
      end
     
-    it "works on the empty hash [10 points]" , points: 10 do
+    it "works on the empty hash [10 points]", points: 10 do
       expect { hash_2_array({}) }.not_to raise_error
       expect(hash_2_array({})).to eq([[],[],[]])
     end
-  end
+end
 end
