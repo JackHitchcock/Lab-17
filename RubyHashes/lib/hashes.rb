@@ -45,11 +45,11 @@ l = contacts.length
 ar = Array.new(3){Array.new(l)}
 for i in 0..l-1
 ar[2][i] = keys[i]
+ar[2][i] = "#{ar[2][i]}"
 ar[0][i] = contacts[keys[i]][:email]
 ar[1][i] = contacts[keys[i]][:phone]
 end
 return ar
 end
 hash_2_array contacts
-
 

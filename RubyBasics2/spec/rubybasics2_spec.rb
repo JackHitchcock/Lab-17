@@ -1,7 +1,7 @@
 require 'rubybasics2.rb'
 
 RSpec.configure do |config|
-  config.filter_run_excluding :disabled => true
+  config.filter_run_excluding
 end
 
 describe "#hello" do
